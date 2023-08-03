@@ -16,5 +16,5 @@ spec:
     spec:
       containers:
       - name: customer
-        image: 703550360617.dkr.ecr.ap-south-1.amazonaws.com/batch13:latest
+        image: 778611043572.dkr.ecr.ap-south-1.amazonaws.com/batch14:2
         imagePullPolicy: Always
