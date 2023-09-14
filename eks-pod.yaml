@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: customer
-    image: 703550360617.dkr.ecr.ap-south-1.amazonaws.com/batch13:3
+    image: 778611043572.dkr.ecr.us-east-1.amazonaws.com/customer:1
     ports:
     - containerPort: 8081
