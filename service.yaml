@@ -5,7 +5,7 @@ metadata:
   labels:
     app: packersmovers
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: packersmovers
   ports:
