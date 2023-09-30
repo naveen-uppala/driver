@@ -30,12 +30,12 @@ public class PackersMoversController {
         
         
         @GetMapping("/ping")
-        public String ping() {  return "Hi this is Rajesh" ;
+        public String ping() {  return "Hi this is Uppala" ;
         			
         }
         
         @GetMapping("/name")
-        public String demo() {  return "My name is Amulya" ;
+        public String demo() {  return "My name is Naveen" ;
         			
         }        
 
