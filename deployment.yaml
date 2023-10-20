@@ -8,11 +8,11 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 2
-      maxUnavailable: 2
+      maxSurge: 1
+      maxUnavailable:1
   revisionHistoryLimit: 4
-  replicas: 10
-  minReadySeconds: 15
+  replicas:3
+  minReadySeconds: 10
   selector:
     matchLabels:
       app: packersmovers
