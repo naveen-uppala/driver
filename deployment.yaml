@@ -9,9 +9,9 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
-      maxUnavailable:1
+      maxUnavailable: 1
   revisionHistoryLimit: 4
-  replicas:3
+  replicas: 3
   minReadySeconds: 10
   selector:
     matchLabels:
