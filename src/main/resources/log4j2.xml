@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
   <Appenders>
-    <File name="FILE" fileName="/var/log/syslog/app.log" >
+    <File name="FILE" fileName="logs/app.log">
       <JSONLayout compact="true" eventEol="true" properties="true" stacktraceAsString="true" />
     </File>
   </Appenders>
