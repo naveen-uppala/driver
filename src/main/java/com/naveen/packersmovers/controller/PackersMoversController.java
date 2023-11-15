@@ -30,7 +30,7 @@ public class PackersMoversController {
         
         
         @GetMapping("/ping")
-        public String ping() {  return "Hi this is aws devops" ;
+        public String ping() {  return "Hi, this is Nithin" ;
         			
         }
         
