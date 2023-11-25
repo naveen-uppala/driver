@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_naveen_uppala_customer_1700938601857-push-trigger-input-set
+  identifier: Build_naveen_uppala_customer_1700938601857pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_naveen_uppala_customer_1700938601857
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
