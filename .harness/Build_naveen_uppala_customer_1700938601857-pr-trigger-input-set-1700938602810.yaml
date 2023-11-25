@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_naveen_uppala_customer_1700938601857-pr-trigger-input-set
+  identifier: Build_naveen_uppala_customer_1700938601857prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_naveen_uppala_customer_1700938601857
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
