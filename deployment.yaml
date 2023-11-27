@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customer-deployment
+  name: customer
   labels:
-    app: packersmovers
+    app: backend
 spec:
   strategy:
     type: RollingUpdate
@@ -15,11 +15,11 @@ spec:
   minReadySeconds: 10
   selector:
     matchLabels:
-      app: packersmovers
+      app: backend
   template:
     metadata:
       labels:
-        app: packersmovers
+        app: backend
     spec:
       containers:
       - name: customer
