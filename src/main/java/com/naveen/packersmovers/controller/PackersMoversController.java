@@ -34,8 +34,8 @@ public class PackersMoversController {
         			
         }
         
-        @GetMapping("/name")
-        public String demo() {  return "My name is Uppala" ;
+        @GetMapping("/version")
+        public String demo() {  return "Currently the version 1 is deployed" ;
         			
         }        
 
