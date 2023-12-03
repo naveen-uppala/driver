@@ -12,7 +12,7 @@
 	<groupId>com.naveen</groupId>
 	<artifactId>backendserver</artifactId>
 	<version>0.0.1</version>
-	<name>backendserver</name>
+	<name>customer</name>
 	<description>Full stack application using Spring Boot and react</description>
  	<properties>
 		<java.version>17</java.version>
