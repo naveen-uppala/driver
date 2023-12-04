@@ -95,7 +95,7 @@
 			</plugin> -->
 		</plugins>
 		
-		 <finalName>packersmovers</finalName>
+		/// <finalName>packersmovers</finalName>
 	</build>
 
 </project>
