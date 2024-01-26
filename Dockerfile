@@ -9,6 +9,6 @@ RUN mvn -f /java/pom.xml clean package
 
 ########## Second Stage build ###########
 FROM amazoncorretto:17
-COPY --from=build1 /java/target/customer-0.0.1.jar /java/customer-0.0.1.jarr
+COPY --from=build1 /java/target/customer-0.0.1.jar /java/customer-0.0.1.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/java/customer-0.0.1.jar"]
