@@ -30,8 +30,6 @@ public class PackersMoversController {
         
         
         @GetMapping("/ping")
-        public String ping() {  return "This is a customer micro-service";
-        			
-        }             
+        public String ping() {  return "This is a customer micro-service";}             
 
     }
