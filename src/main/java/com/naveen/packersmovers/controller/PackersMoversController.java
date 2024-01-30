@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/customer")
 @CrossOrigin
 
 public class PackersMoversController {
@@ -32,11 +32,6 @@ public class PackersMoversController {
         @GetMapping("/ping")
         public String ping() {  return "Hi, this is Naveen Uppala" ;
         			
-        }
-        
-        @GetMapping("/version")
-        public String demo() {  return "Currently the version 2 is deployed" ;
-        			
-        }        
+        }             
 
     }
