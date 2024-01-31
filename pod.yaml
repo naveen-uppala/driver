@@ -8,3 +8,7 @@ spec:
     image: 533266968694.dkr.ecr.ap-south-1.amazonaws.com/customer:2
     ports:
     - containerPort: 8081
+  - name: webapp
+    image: nginx
+    ports:
+    - containerPort: 80   
