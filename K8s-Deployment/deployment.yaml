@@ -4,7 +4,6 @@ metadata:
   name: customer
   labels:
     app: packersmovers
-    tier: backend
 spec:
   strategy:
     type: RollingUpdate
@@ -12,12 +11,11 @@ spec:
       maxSurge: 1
       maxUnavailable: 1
   revisionHistoryLimit: 4
-  replicas: 1
+  replicas: 3
   minReadySeconds: 10
   selector:
     matchLabels:
       app: packersmovers
-      tier: backend
   template:
     metadata:
       labels:
