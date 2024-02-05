@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: customer
-        image: default_image/customer:default_tag
+        image: 533266968694.dkr.ecr.ap-south-1.amazonaws.com/customer:2
         imagePullPolicy: Always
         ports:
         - containerPort: 8081
