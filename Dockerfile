@@ -3,6 +3,9 @@ COPY target/customer-0.0.1.jar /
 EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "customer-0.0.1.jar"]
 
+
+################ MULTI STAGE DOCKER BUILD###########################
+
 # FROM maven:3.9.4-amazoncorretto-17 as build1
 # COPY /. /java/
 # RUN mvn -f /java/pom.xml clean package
