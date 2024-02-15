@@ -30,6 +30,6 @@ public class PackersMoversController {
         
         
         @GetMapping("/ping")
-        public String ping() {  return "This is Lavanya";}             
+        public String ping() {  return "Hi this is Naveen";}             
 
     }
