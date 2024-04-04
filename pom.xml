@@ -11,7 +11,7 @@
 	
 	<groupId>com.naveen</groupId>
 	<artifactId>customer</artifactId>
-	<version>0.0.1</version>
+	<version>SNAPSHOT-0.0.1</version>
 	<name>customer</name>
 	<description>Full stack application using Spring Boot and react</description>
  	<properties>
