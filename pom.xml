@@ -108,6 +108,14 @@
 				</execution>
 			    </executions>
 			</plugin>
+			<plugin>
+                               <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>versions-maven-plugin</artifactId>
+                                <version>2.8.1</version> <!-- Use the latest version -->
+                        	<configuration>
+                    		<!-- Specify version rules or exclusions if needed -->
+                              	</configuration>
+                    	</plugin>
 			
 <!-- 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
