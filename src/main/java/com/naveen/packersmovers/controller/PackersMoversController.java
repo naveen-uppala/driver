@@ -4,15 +4,12 @@ import com.naveen.packersmovers.messageservice.MessageService;
 import com.naveen.packersmovers.model.Customer;
 import com.naveen.packersmovers.service.PackersMoversService;
 
-//import com.naveen.userinfo.service.UserServiceImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 
 @RestController
 @RequestMapping("/customer")
-@CrossOrigin
+// @CrossOrigin
 
 public class PackersMoversController {
         @Autowired
@@ -20,7 +17,8 @@ public class PackersMoversController {
                 
         @Autowired
         private MessageService messageService;
-        
+
+        @CrossOrigin(origins = "*", allowedHeaders = "*")
         @PostMapping("/customerDetails")
         public String customerDetails(@RequestBody Customer customer){
             userService.saveUser(customer);
