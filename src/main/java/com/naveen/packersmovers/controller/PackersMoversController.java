@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/customer")
-// @CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 
 public class PackersMoversController {
         @Autowired
@@ -18,7 +18,7 @@ public class PackersMoversController {
         @Autowired
         private MessageService messageService;
 
-        @CrossOrigin(origins = "*", allowedHeaders = "*")
+       
         @PostMapping("/customerDetails")
         public String customerDetails(@RequestBody Customer customer){
             userService.saveUser(customer);
