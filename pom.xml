@@ -116,6 +116,20 @@
                     		<!-- Specify version rules or exclusions if needed -->
                               	</configuration>
                     	</plugin>
+		      <plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>versions-maven-plugin</artifactId>
+		        <version>2.7</version> <!-- Use the latest version available -->
+		        <executions>
+		          <execution>
+		            <id>update-dependencies</id>
+		            <phase>validate</phase> <!-- You can choose any phase where you want this to be executed -->
+		            <goals>
+		              <goal>use-releases</goal>
+		            </goals>
+		          </execution>
+		        </executions>
+		      </plugin>
 			
 <!-- 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
