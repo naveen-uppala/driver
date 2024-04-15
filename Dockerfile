@@ -1,6 +1,6 @@
 FROM amazoncorretto:17
 COPY target/customer-0.0.1.jar /
-EXPOSE 8081
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "customer-0.0.1.jar"]
 
 
