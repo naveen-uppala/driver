@@ -1,17 +1,17 @@
-FROM amazoncorretto:17
-COPY target/customer-1.0.1.jar /
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "customer-1.0.1.jar"]
+# FROM amazoncorretto:17
+# COPY target/customer-1.0.1.jar /
+# EXPOSE 8080
+# ENTRYPOINT ["java", "-jar", "customer-1.0.1.jar"]
 
 
 ################ MULTI STAGE DOCKER BUILD###########################
 
-# FROM maven:3.9.4-amazoncorretto-17 as build1
-# COPY /. /java/
-# RUN mvn -f /java/pom.xml clean package
+FROM maven:3.9.4-amazoncorretto-17 as build1
+COPY /. /java/
+RUN mvn -f /java/pom.xml clean package
 
-# ########## Second Stage build ###########
-# FROM amazoncorretto:17
-# COPY --from=build1 /java/target/customer-0.0.1.jar /java/customer-0.0.1.jar
-# EXPOSE 8080
-# ENTRYPOINT ["java","-jar","/java/customer-0.0.1.jar"]
+########## Second Stage build ###########
+FROM amazoncorretto:17
+COPY --from=build1 /java/target/customer-0.0.1.jar /java/customer-0.0.1.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/java/customer-0.0.1.jar"]
