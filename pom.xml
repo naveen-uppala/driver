@@ -109,13 +109,13 @@
 					    <id>post-unit-test</id>
 					    <phase>test</phase>
 					    <goals>
-							<goal>report</goal>
+						<goal>report</goal>
 					    </goals>
 					</execution>
 					<execution>
 					    <id>default-prepare-agent</id>
 					    <goals>
-							<goal>prepare-agent</goal>
+						<goal>prepare-agent</goal>
 					    </goals>
 					</execution>
 			    </executions>
