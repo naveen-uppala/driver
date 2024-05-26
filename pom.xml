@@ -26,14 +26,15 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <!-- Plugin for Jacoco -->
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
-                <executions>
-                    <!-- Configurations for Jacoco -->
-                </executions>
-            </plugin>
+         <plugin>
+                 <groupId>org.jacoco</groupId>
+                 <artifactId>jacoco-maven-plugin</artifactId>
+                 <version>0.8.8</version> <!-- Replace ${jacoco.version} with the actual version number -->
+                 <executions>
+                 <!-- Configurations for Jacoco -->
+                 </executions>
+          </plugin>
+
             <!-- Plugin for updating dependencies -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
