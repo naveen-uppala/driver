@@ -37,6 +37,14 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://3.138.169.221:8081/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -154,3 +162,4 @@
         </plugins>
     </build>
 </project>
+
