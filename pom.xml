@@ -29,11 +29,11 @@
     <distributionManagement>
         <repository>
             <id>maven-releases</id>
-            <url>http://3.138.169.221:8081/repository/maven-releases/</url>
+            <url>http://18.222.97.87:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-<!--             <url>http://3.138.169.221:8081/repository/maven-snapshots/</url> -->
+<!--             <url>http://18.222.97.87:8081/repository/maven-snapshots/</url> -->
         </snapshotRepository>
     </distributionManagement>
 
@@ -41,7 +41,7 @@
         <repository>
             <id>maven-releases</id>
             <name>maven-releases</name>
-            <url>http://3.138.169.221:8081/repository/maven-releases/</url>
+            <url>http://18.222.97.87:8081/repository/maven-releases/</url>
         </repository>
     </repositories>
 
