@@ -132,14 +132,24 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <apiKeys>
-                        <nvdApiKey>f53f8054-8349-465c-a818-3a14d0e8333c</nvdApiKey>
-                    </apiKeys>
+                    <dataDirectory>${project.build.directory}/dependency-check-data</dataDirectory>
+                    <cveValidForHours>48</cveValidForHours>
+                    <connectionTimeout>600000</connectionTimeout>
+                    <analyzers>
+                        <nuspecAnalyzerEnabled>false</nuspecAnalyzerEnabled>
+                        <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+                        <centralAnalyzerEnabled>false</centralAnalyzerEnabled>
+                        <ossIndexAnalyzerEnabled>true</ossIndexAnalyzerEnabled>
+                        <nvd>
+                            <enabled>false</enabled>
+                        </nvd>
+                    </analyzers>
                     <formats>
                         <format>HTML</format>
                     </formats>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
