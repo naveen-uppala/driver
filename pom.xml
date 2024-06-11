@@ -118,24 +118,27 @@
             </plugin>
 
             <plugin>
-      <groupId>org.owasp</groupId>
-      <artifactId>dependency-check-maven</artifactId>
-      <version>9.2.0</version>
-      <executions>
-        <execution>
-          <goals>
-            <goal>check</goal>
-          </goals>
-        </execution>
-      </executions>
-      <configuration>
-        <formats><!-- Specify the formats you want to generate -->
-          <format>HTML</format>
-<!--           <format>XML</format> -->
-          <!-- Add more formats if needed -->
-        </formats>
-      </configuration>
-           </plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>9.2.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <apiKeys>
+                        <nvdApiKey>f53f8054-8349-465c-a818-3a14d0e8333c</nvdApiKey>
+                    </apiKeys>
+                    <formats><!-- Specify the formats you want to generate -->
+                        <format>HTML</format>
+                  <!--   <format>XML</format> -->
+                        <!-- Add more formats if needed -->
+                    </formats>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
