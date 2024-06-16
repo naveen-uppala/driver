@@ -104,14 +104,15 @@
             <artifactId>logstash-logback-encoder</artifactId>
             <version>6.6</version>
         </dependency>
+        <!-- JUnit 4 dependency -->
         <dependency>
-            <groupId>org.jacoco</groupId> 
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.8</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- JUnit 5 dependencies -->
-        <dependency>
+        <!-- Uncomment below dependencies to use JUnit 5 -->
+        <!-- <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.8.2</version>
@@ -122,7 +123,7 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.8.2</version>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
     </dependencies>
 
     <build>
