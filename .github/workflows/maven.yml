@@ -72,7 +72,12 @@ jobs:
       run: |
         docker push sandeepkomalpothu/customer:latest
 
-    - name: Apply Kubernetes manifests
-      run: kubectl apply -f deployment-service.yaml -n webapps1
+    - name: Kubectl Action
+      uses: tale/kubectl-action@v1
+      with:
+        base64-kube-config: ${{ secrets.KUBE_CONFIG}}
+    - run: |
+          kubectl apply -f deployment-service.yaml -n webapps1
+          kubectl get svc -n webapps
 
 
