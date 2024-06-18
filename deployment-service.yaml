@@ -40,7 +40,7 @@ metadata:
     app: packersmovers
     tier: backend
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: packersmovers
     tier: backend
