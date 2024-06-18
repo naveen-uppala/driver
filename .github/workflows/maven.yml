@@ -72,4 +72,7 @@ jobs:
       run: |
         docker push sandeepkomalpothu/customer:latest
 
+    - name: Apply Kubernetes manifests
+      run: kubectl apply -f deployment-service.yaml -n webapps1
+
 
