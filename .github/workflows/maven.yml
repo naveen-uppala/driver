@@ -17,7 +17,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-        
 
     - name: Build with Maven
       run: mvn package --file pom.xml
@@ -75,9 +74,12 @@ jobs:
     - name: Kubectl Action
       uses: tale/kubectl-action@v1
       with:
-        base64-kube-config: ${{ secrets.KUBE_CONFIG}}
-    - run: |
-          kubectl apply -f deployment-service.yaml -n webapps1
-          kubectl get svc -n webapps
+        base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+
+    - name: Apply Kubernetes Deployment
+      run: |
+        kubectl apply -f deployment-service.yaml -n webapps1
+        kubectl get svc -n webapps
+      working-directory: ./ # Ensure this is correct, or specify the correct directory containing deployment-service.yaml
 
 
