@@ -1,7 +1,17 @@
 FROM amazoncorretto:17
-COPY target/customer-1.0.1.jar /
+
+# Set working directory
+WORKDIR /app
+
+# Copy the JAR file into the container
+COPY target/*.jar customer.jar
+
+# Expose the application port
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "customer-1.0.1.jar"]
+
+# Command to run the application
+ENTRYPOINT ["java", "-jar", "customer.jar"]
+
 
 
 
