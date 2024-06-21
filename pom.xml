@@ -10,8 +10,8 @@
 	</parent>
 	
 	<groupId>com.naveen</groupId>
-	<artifactId>customer</artifactId>
-	<version>1.0.1</version>
+	<artifactId>driver</artifactId>
+	<version>2.0.1</version>
 	<name>customer</name>
 	<description>Full stack application using Spring Boot and react</description>
  	<properties>
