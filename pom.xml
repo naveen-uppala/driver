@@ -26,25 +26,6 @@
         <sonar.language>java</sonar.language>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://18.222.97.87:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <!-- <url>http://18.222.97.87:8081/repository/maven-snapshots/</url> -->
-        </snapshotRepository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>maven-releases</id>
-            <name>maven-releases</name>
-            <url>http://18.222.97.87:8081/repository/maven-releases/</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -111,19 +92,6 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- Uncomment below dependencies to use JUnit 5 -->
-        <!-- <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency> -->
     </dependencies>
 
     <build>
@@ -140,36 +108,6 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-<!--             <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>9.2.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <dataDirectory>${project.build.directory}/dependency-check-data</dataDirectory>
-                    <cveValidForHours>48</cveValidForHours>
-                    <connectionTimeout>600000</connectionTimeout>
-                    <analyzers>
-                        <nuspecAnalyzerEnabled>false</nuspecAnalyzerEnabled>
-                        <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
-                        <centralAnalyzerEnabled>false</centralAnalyzerEnabled>
-                        <ossIndexAnalyzerEnabled>true</ossIndexAnalyzerEnabled>
-                        <nvd>
-                            <enabled>false</enabled>
-                        </nvd>
-                    </analyzers>
-                    <formats>
-                        <format>HTML</format>
-                    </formats>
-                </configuration>
-            </plugin> -->
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
