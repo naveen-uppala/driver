@@ -26,6 +26,13 @@
         <sonar.language>java</sonar.language>
     </properties>
 
+<!--     <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://repourl/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>     -->
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
