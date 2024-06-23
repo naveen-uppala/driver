@@ -108,13 +108,19 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>update-dependencies</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>use-releases</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>            
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -144,20 +150,6 @@
                         <id>default-prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>2.7</version>
-                <executions>
-                    <execution>
-                        <id>update-dependencies</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>use-releases</goal>
                         </goals>
                     </execution>
                 </executions>
