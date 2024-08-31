@@ -1,6 +1,4 @@
 package com.naveen.packersmovers.controller;
-
-import com.naveen.packersmovers.messageservice.MessageService;
 import com.naveen.packersmovers.model.Customer;
 import com.naveen.packersmovers.service.PackersMoversService;
 
@@ -14,9 +12,6 @@ import org.springframework.web.bind.annotation.*;
 public class PackersMoversController {
         @Autowired
         private PackersMoversService userService;
-                
-        @Autowired
-        private MessageService messageService;
 
        
         @PostMapping("/customerDetails")

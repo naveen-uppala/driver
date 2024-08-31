@@ -26,22 +26,22 @@ public class MessageService {
     }
     
     
-    public String sendMessage(Customer user){
-        MessageService myClient =new MessageService();
-        String message = "Name: " + user.getfullName() + " " + "\n" + 
-        				 "Email:" + user.getEmail() + " " + "\n" +
-        				 "Cell Number:" + user.getPhone() + " " + "\n" +
-        				 "From:" + user.getfromAddress() + " " + "\n" +
-        				 "To:" + user.gettoAddress() + " " + "\n" +
-        				 "Est. Date" + user.getestDate() + " " + "\n" +
-        				 "Move Type:" + user.getmoveSize() + " " + "\n" ;
-        				 
-        
-        
-        myClient.sendCustomerDetails(message);
-        return null;
-		
-    }
+//    public String sendMessage(Customer user){
+//        MessageService myClient =new MessageService();
+//        String message = "Name: " + user.getfullName() + " " + "\n" + 
+//        				 "Email:" + user.getEmail() + " " + "\n" +
+//        				 "Cell Number:" + user.getPhone() + " " + "\n" +
+//        				 "From:" + user.getfromAddress() + " " + "\n" +
+//        				 "To:" + user.gettoAddress() + " " + "\n" +
+//        				 "Est. Date" + user.getestDate() + " " + "\n" +
+//        				 "Move Type:" + user.getmoveSize() + " " + "\n" ;
+//        				 
+//        
+//        
+//        myClient.sendCustomerDetails(message);
+//        return null;
+//		
+//    }
     
     public void sendCustomerDetails(String message) {
         AmazonSNS snsClient = AmazonSNSClient.builder().withRegion(Regions.AP_SOUTH_1).build();

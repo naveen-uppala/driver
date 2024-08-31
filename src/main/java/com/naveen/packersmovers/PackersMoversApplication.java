@@ -9,6 +9,4 @@ public class PackersMoversApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PackersMoversApplication.class, args);
 	}
-
-
 }
