@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.naveen</groupId>
-    <artifactId>naveen</artifactId>
-    <version>1.0.0</version>
+    <artifactId>customer</artifactId>
+    <version>1.0.1</version>
     <name>customer</name>
     <description>Full stack application using Spring Boot and React</description>
     <packaging>jar</packaging>
