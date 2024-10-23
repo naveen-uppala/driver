@@ -1,0 +1,24 @@
+name: "Sync GHAS to Jira"
+
+on:
+  schedule:
+    - cron: '0 0 * * *' #"*/6 * * * *"   # Run every minute
+  workflow_dispatch:
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Sync GitHub Advanced Security and Jira
+        uses: Khairajani/ghas-jira-integration@add_to_issue
+        with:
+          jira_url: '${{ secrets.JIRA_PROJECT_URL }}'
+          jira_user: '${{ secrets.JIRA_EMAIL }}'
+          jira_token: '${{ secrets.JIRA_TOKEN }}'
+          jira_project: 'SCRUM'
+          github_token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
+          sync_direction: 'gh2jira'
