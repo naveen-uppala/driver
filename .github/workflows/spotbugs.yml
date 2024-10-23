@@ -1,0 +1,42 @@
+name: SpotBugs Scan
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * *'  # Runs once every day at midnight
+
+jobs:
+  spotbugs:
+    permissions:
+      contents: read  # for actions/checkout to fetch code
+      security-events: write  # for uploading SARIF results (if using SARIF)
+      actions: read  # for accessing private repositories if needed
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Set up Java 17
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+
+      # Build the project (for Maven)
+      - name: Build with Maven
+        run: mvn clean install -DskipTests
+
+      # Run SpotBugs to check for issues
+      - name: SpotBugs Scan
+        run: mvn spotbugs:spotbugs
+
+      # Optionally upload SpotBugs report to the GitHub Security tab (SARIF format)
+      - name: Upload SpotBugs Report (SARIF)
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: target/spotbugsXml.xml
