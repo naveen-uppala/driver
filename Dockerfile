@@ -9,7 +9,8 @@
 ######### First Stage build##############
 FROM maven:3.9.4-amazoncorretto-17 as build1
 COPY /. /java/
-RUN mvn -f /java/pom.xml clean install
+WORKDIR /java
+RUN mvn clean install
 
 ########## Second Stage build ###########
 FROM amazoncorretto:17 as final
