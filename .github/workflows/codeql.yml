@@ -23,7 +23,7 @@ jobs:
       matrix:
         include:
         - language: java-kotlin
-          build-mode: automatic  # For automatic Java/Kotlin builds
+          build-mode: autobuild  # For automatic Java/Kotlin builds
           
     steps:
     - name: Checkout repository
@@ -38,7 +38,7 @@ jobs:
 
     # Build the Java project if needed
     - name: Build the project
-      if: matrix.build-mode == 'automatic'
+      if: matrix.build-mode == 'autobuild'
       run: |
         ./gradlew build           # If using Gradle
         # OR for Maven-based projects
