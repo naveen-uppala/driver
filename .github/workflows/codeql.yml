@@ -40,9 +40,9 @@ jobs:
     - name: Build the project
       if: matrix.build-mode == 'autobuild'
       run: |
-        ./gradlew build           # If using Gradle
+        # ./gradlew build           # If using Gradle
         # OR for Maven-based projects
-        # mvn clean install -DskipTests
+        mvn clean install -DskipTests
 
     # Run CodeQL analysis
     - name: Perform CodeQL Analysis
