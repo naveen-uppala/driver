@@ -22,7 +22,7 @@ public class PackersMoversController {
 
     @GetMapping("/ping")
     public String ping() {
-        return "Hi, this is v2 version";
+        return "Hi, this is Naveen Uppala";
     }
 
     // Vulnerable endpoint to XSS
