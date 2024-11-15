@@ -26,12 +26,13 @@
         <sonar.language>java</sonar.language>
     </properties>
 
-<!--     <distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://repourl/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>     -->
+    <distributionManagement>
+      <repository>
+        <id>thecloudnation-customer</id>
+        <name>thecloudnation-customer</name>
+        <url>https://thecloudnation-054037107230.d.codeartifact.us-east-2.amazonaws.com/maven/customer/</url>
+      </repository>
+    </distributionManagement>
     
     <dependencies>
         <dependency>
