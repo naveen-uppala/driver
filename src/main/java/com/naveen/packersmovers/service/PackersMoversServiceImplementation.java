@@ -1,7 +1,7 @@
 package com.naveen.packersmovers.service;
 
-import com.naveen.packersmovers.model.Customer;
-import com.naveen.packersmovers.repository.CustomerRepository;
+import com.naveen.packersmovers.model.Driver;
+import com.naveen.packersmovers.repository.DriverRepository;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +14,16 @@ import java.util.List;
 public class PackersMoversServiceImplementation  implements  PackersMoversService {
 
     @Autowired
-    private CustomerRepository userRepository;
+    private DriverRepository userRepository;
 
 
     @Override
-    public  Customer saveUser(Customer customer) {
-        return  userRepository.save(customer);
+    public  Driver saveUser(Driver driver) {
+        return  userRepository.save(driver);
     }
 
     @Override
-    public List<Customer> getAllCustomers() {
+    public List<Driver> getAllDrivers() {
         return userRepository.findAll();
     }
    

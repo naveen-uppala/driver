@@ -1,12 +1,12 @@
 package com.naveen.packersmovers.controller;
 
-import com.naveen.packersmovers.model.Customer;
+import com.naveen.packersmovers.model.Driver;
 import com.naveen.packersmovers.service.PackersMoversService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/driver")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 
 public class PackersMoversController {
@@ -14,9 +14,9 @@ public class PackersMoversController {
     @Autowired
     private PackersMoversService userService;
 
-    @PostMapping("/customerDetails")
-    public String customerDetails(@RequestBody Customer customer) {
-        userService.saveUser(customer);
+    @PostMapping("/driverDetails")
+    public String driverDetails(@RequestBody Driver driver) {
+        userService.saveUser(driver);
         return "New user is added";
     }
 
@@ -25,10 +25,4 @@ public class PackersMoversController {
         return "Hi, this is Madhu";
     }
 
-    // Vulnerable endpoint to XSS
-    @GetMapping("/greet")
-    public String greet(@RequestParam("name") String name) {
-        // Directly returning user input without validation (XSS Vulnerability)
-        return "Hello, " + name;
-    }
 }

@@ -2,11 +2,11 @@ package com.naveen.packersmovers.service;
 
 import java.util.List;
 
-import com.naveen.packersmovers.model.Customer;
+import com.naveen.packersmovers.model.Driver;
 
 public interface PackersMoversService {
-    public Customer saveUser(Customer customer);
-    public List<Customer> getAllCustomers();
+    public Driver saveUser(Driver driver);
+    public List<Driver> getAllDrivers();
    
     
 }
